@@ -1,0 +1,9 @@
+Yo-yo-jo: Libreria la cual se parece a React, pero menos robusta y pesada, 
+empty-element: Libreria la cual si le pasamos un elemento del DOM elimina su contenido o elementos
+moment.js: Libreria para mostrar fechas de publicación de manera relativa (Hace n dias...).
+format.js: Libreria para internacionalizar fechas y textos
+watchify- Modulo de node_modules: Automatiza el build del proyecto (queda observando ante cualquier cambio en todo momento.
+----
+linter:Herramientas que permiten mantener mas legible el código (Podemos modificar esas reglas)
+Ex. Standarjs
+avajs: herramienta que permite escribir y correr tests (test runner)

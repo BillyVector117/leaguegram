@@ -1,0 +1,223 @@
+/* Archivo scss antes de ser compilado a css y procesado a producción */
+$secondary-color: #125688;/* Definir un color en una variable */
+$avatar-size: 48px;
+@import "node_modules/materialize-css/sass/materialize.scss"; /* Archivo a importar, tiene los estilos de materialize escritos en scss */
+@import "./loader"; /* Archivo que contiene los estilos del loader */
+body{
+    background: rgba(243, 236, 231, 0.973);/* rgba(240, 238, 238, 0.933); */
+    color: #125688;
+    font-family: Montserrat;
+}
+
+.landing {
+    margin: 30px auto;/* Margen top-botton de 30px y left-right= auto (centrado), no lo queremos para el timeline, pero aqui si*/
+
+}
+.mobile { /* Seleccionar imagen */
+    max-width: 100%;/* Usar el contenedor disponible  (5/12 columnas para el mobil) */
+}
+.site-footer {/* Selección del footer/pie de página */
+    text-transform: uppercase;/* Modificar a mayusculas */
+    font-size: 12px;/* Tamaño de letra */
+}
+.signup-box,/* Elemento del formulario de inputs */
+.login-box {/* Elemento del formulario cuenta existente */
+    background-color: rgba(243, 236, 231, 0.973);/* Color fondo de ambas cajas */
+    border:1px solid rgba(177, 165, 165, 0.1);/* Bordes de cajas */
+    border-radius: 10px;/* Borde redondeado */
+    padding: 10px 2px;/* margen interno en las cajas */
+}
+.login-box{/* Elemento del formulario cuenta existente */
+    text-align: center;
+}
+.leagueGram {/* Seleccionar titulo de formulario */
+    font-family: 'Oleo Script Swash Caps'; /* tipo de letra del titulo del formulario  */
+    font-size: 42px;/* Tamaño de letra */
+    text-align: center;/* Centrar el contenido(yiyul */
+    color: $secondary-color !important; /* Color de letra <<azul>>, con important ya que materialize pisa el color por defecto */
+}
+.signup-form {/* Formulario completo */
+    width: 65%;/* Ancho del formulario */
+    margin: 0 auto;/* margen top-bottom= 0% y left-right auto, para centrar el contenido */
+}
+.signup-form h2{/* Seleccionamos el subtitulo del formulario (leyenda) */
+    color: #a5a7aa;/* Color gris */
+    font-size: 1.3em;/* Tamaño de letra  */
+}
+.signup-form .btn.btn-fb{/* Botón de Facebook */
+    background-color: #4090db;/* Color asimilando Facebook */
+    font-size: .9em;/* Tamaño de letra */
+}
+.signup-form .btn.btn-fb:hover{/* Botón de Facebook al hacer hover */
+    background-color: #2d6599;/* Color azul mas oscuro */
+}
+.signup-form .btn.btn-signup {/* Botón de signUp/Registrarse */
+    background-color: $secondary-color;/* Clor obscuro. */
+    padding: 0 50px;/* Margen interior */
+    margin: 30px 60px;/* Margen para centrar el botón */
+}
+.header {/* Header/Barra de navegación/nav */
+    background-color: aliceblue;/* Color blanco nav */
+    color: $secondary-color;/* Color de variable definida (azul) */
+    box-shadow: none;/* Sin sombra */
+    border-bottom: 1px solid #edeeee;/*  */
+}
+.timeline {/* Contenido (de la plantilla homepage) */
+    padding: 30px 0; /* Espaciado entre el header */
+}
+
+.avatar {/* Imagen/pic de cada card*/
+    width: $avatar-size;
+    height: $avatar-size;/* Ancho maximo */
+    border-radius: 50%;/* Imagen redondeada */
+    float: left;/* La imagen este a la ezquierda */
+    margin-right: 12px;/*  Mover la imagen un poco a la izquierda*/
+}
+.card .username { /* Texto de username de la tarjeta */
+    color: $secondary-color /* Letras azules */
+}
+.card small.time { /* El texto de cuando se público */
+    line-height: $avatar-size;/* Tenga una altura mas alta */
+}
+.card p { /*parrado donde esa el corazón y numero de likes */
+    padding: 20px 0;/* Tengan margen interno */
+}
+.card .likes { /* Texto con número de likes */
+    line-height: 30px;/* Que este a mitad del renglón */
+    margin-left: 12px;/* Este separado del borde izquierdo */
+}
+.card i {/* Icono de corazón */
+    font-size: 30px;/* Tamaño del icono igual al texto .likes para que esten alineados*/
+}
+.card .fa-heart-o {/* Corazón vacio */
+    color: $secondary-color; /* Color azul del corazón por defecto */
+}
+.card .fa-heart {/* Corazón lleno */
+    color: #f44336; /* color rojo al estar vacio */
+    display: none; /* No se mostrara por defecto */
+}
+.card.liked {/* Si card tiene la clase liked */
+    .fa-heart {/* Selecciona el corazón relleno */
+        display: block;/* Se muestra corazón lleno */
+}
+    .fa-heart-o {/* Pero ademas oculta el corazón que no esta relleno */
+        display: none;/* Ocultar corazón */
+    }
+}
+.btn i{ /* Selecciona el icono de lenguaje del dropdown */
+    font-size: 2rem; /* 2rem de tamaño del icono */
+    float: left; /* Ajustalo a la izquierda para que quede  la palabra y el icono separados */
+}
+.form-upload {/* Selección del formulario para SUBIR una foto */
+    span,button {/* Seleccionar el texto de subir imagen mas el botón de cancelar*/
+        color: white; /* Color de letra blanco */
+    }
+    .fileUpload {/* Selecciona el div donde esta el span de subir foto y el input del nombre del archivo */
+        position: relative;/* Posicionamiento para poder mover elementos hijos sobre este */
+        overflow: hidden; /* Se muestre completo el texto en los bordes */
+        margin: 10px;/* Separación de los demas elementos  */
+
+        input{
+            position: absolute;/* para poder moverlo de acuerdo al posicionamiento relative de su div (padre) */
+            top: 0;/* De esta manera queda centrado y ocupa todo el contenido del botón */
+            right: 0;
+            bottom: 0;/* Ocupe su espacio completo */
+            margin: 0;
+            padding: 0;/* Sin margen interno con los demas elementos (el span) */
+            font-size: 20px;/* Tamaño de eltra */
+            cursor: pointer;/* Otro cursor */
+            opacity: 0;/* Ocultar el input */
+            filter: alpha(opacity=0);/* Lo mismo que opacity, pero para navegadores que no soporten el opacity. */
+
+        }
+    }
+}
+.avatar {
+    background: rgba(175, 173, 172, 0.973);/* background-image: url("image.png"); */
+     /* cambia estos dos valores para definir el tamaño de tu círculo */
+     height: 50px;
+     width: 50px;
+     /* los siguientes valores son independientes del tamaño del círculo */
+     background-repeat: no-repeat;
+     background-position: 50%;
+     border-radius: 50%;
+     background-size: 100% auto;
+     border: #292323 solid 2px;
+}
+.userAv {
+    height: 50px;
+    width: 50px;
+    background: rgba(175, 173, 172, 0.973);/* background-image: url("image.png"); */
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 110px;
+    width: 110px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    border: #292323 solid 2px;
+}
+.section-name .username {
+    color: $secondary-color; /* Letras azules */
+    font-size: 30px;/* Tamaño del icono igual al texto .likes para que esten alineados*/
+    font-family: Montserrat;
+    margin: 2.8rem 0 1.68rem 0;
+    line-height: 110%;
+}
+.profileLanding {
+    margin: 30px auto;/* Margen top-botton de 30px y left-right= auto (centrado), no lo queremos para el timeline, pero aqui si*/
+    background: rgba(243, 236, 231, 0.973);
+}
+.wave-container {
+    position: relative;
+    //background: #09F;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+}
+
+.picture {
+    border: #292323 solid 2px;
+    position: relative;
+    max-width: 289;
+    max-height: 180;
+    margin: 10px 10px;
+}
+
+.picture:hover {
+    position: relative;
+    border: #292323 solid 2px;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(4px);
+
+}
+.like-heart {
+    font-size: 10em; /* 10 veces el tamaño por defecto del browser */
+    position: absolute; /* Para centrarlo despues */
+    top: 50%;/* centrar verticalmente */
+    left: 50%;/* Centrar horizontalmente */
+    transform: translate(-50%, -50%);/* Estara sobre la foto  */
+    transition: all .1s ease; /* Transicion a todas las propiedades del elemento de 0.1seg de velocidad liviana (cuando desaparezca el corazon)*/
+    color: #edeeee;
+    opacity: 0;
+    &.liked { /* Selecciona al elemento padre y ademas los que tengan esta clase */
+        color: #f44336;
+        font-size: 12em;
+        display: block;
+        transition: all .5s ease; /* Transicion a todas las propiedades del elemento de 0.5seg de velocidad liviana (cuando aparezca el corazón)*/
+        opacity: 1;
+    }
+}
+
+
+
+/* 
+width: $avatar-size;
+    height: $avatar-size; Ancho maximo 
+    border-radius: 50%; Imagen redondeada 
+    float: left; La imagen este a la ezquierda 
+    margin-right: 12px;  Mover la imagen un poco a la izquierda */
