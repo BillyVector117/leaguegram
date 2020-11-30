@@ -1,4 +1,4 @@
-![leaguegram](https://prnt.sc/vsw7tz)
+![leaguegram](https://github.com/BillyVector117/leaguegram/blob/main/LEAGUEGRAMSCREEN.png)
 <p align="center">
   <a href="http://materializecss.com/">
     <img src="http://materializecss.com/res/materialize.svg" width="150">
