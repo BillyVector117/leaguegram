@@ -1,3 +1,4 @@
+![leaguegram](https://github.com/BillyVector117/leaguegram/blob/main/Screenshot_1.png)
 ![leaguegram](https://github.com/BillyVector117/leaguegram/blob/main/LEAGUEGRAMSCREEN.png)
 <p align="center">
   <a href="http://materializecss.com/">
